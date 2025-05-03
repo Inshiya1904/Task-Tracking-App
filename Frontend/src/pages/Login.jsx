@@ -23,6 +23,8 @@ const Login = () => {
           {
               toast.success(response.message)
               localStorage.setItem('token',response.token)
+              localStorage.setItem("isAuthenticated", "true");
+
               navigate('/')
           }
           else{

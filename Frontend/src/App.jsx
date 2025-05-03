@@ -5,8 +5,7 @@ import Signup from './pages/Signup';
 import './App.css';
 import { Toaster } from "react-hot-toast";
 import Dashboard from './pages/Dashboard';
-import TaskList from './components/TaskList';
-import TaskForm from './components/TaskForm';
+import ProtectedRoute from './components/ProtectedRoute';
 
 
 function App() {
@@ -16,14 +15,18 @@ function App() {
   <>
     <Toaster position="top-center" reverseOrder={false} />
     <Router>
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/viewTask" element={<TaskList/>} />
-        <Route path="/createTask" element={<TaskForm />} />
-
-      </Routes>
+    <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
     </Router>
   </>
   );

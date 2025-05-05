@@ -41,7 +41,7 @@ const Dashboard = () => {
     try {
       console.log('projectId:', projectId);
 
-      const response = await axiosInstance.get(`https://task-tracking-app-8ise.onrender.com/api/task/get-task/${projectId}`);
+      const response = await axiosInstance.get(`${url}/api/task/get-task/${projectId}`);
       if(response.data.success)
       {
         console.log(response)

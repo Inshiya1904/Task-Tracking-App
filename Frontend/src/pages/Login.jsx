@@ -23,8 +23,6 @@ const Login = () => {
           {
               toast.success(response.message)
               localStorage.setItem('token',response.token)
-              localStorage.setItem("isAuthenticated", "true");
-
               navigate('/')
           }
           else{
@@ -32,8 +30,8 @@ const Login = () => {
               navigate('/login')
           }
       } catch (error) {
-          toast.error(response.message)
-          navigate('/login')
+        toast.error(response.message)        
+        navigate('/login');
       }
 
   }

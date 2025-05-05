@@ -23,9 +23,10 @@ const ProjectForm = ({getAllProject}) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form">
+    <form onSubmit={handleSubmit} className="project-form">
       <h3>Create Project</h3>
       <input
+        className='project-input'
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}

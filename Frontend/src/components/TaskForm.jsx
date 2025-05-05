@@ -29,9 +29,9 @@ const TaskForm = ({ fetchTasks,projectId }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form">
+    <form onSubmit={handleSubmit} className="task-form">
       <h3>Create Task</h3>
-      <input
+      <input className='task-input'
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}

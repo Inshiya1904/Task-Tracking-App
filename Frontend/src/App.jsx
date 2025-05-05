@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 
 
+
 function App() {
  
 
@@ -15,18 +16,11 @@ function App() {
   <>
     <Toaster position="top-center" reverseOrder={false} />
     <Router>
-    <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route
-            path="/"
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
+      <Routes>
+        <Route path="/" element={ <ProtectedRoute><Dashboard/></ProtectedRoute> }/>
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
     </Router>
   </>
   );

@@ -126,17 +126,58 @@ box-sizing: border-box;
  .dashboard h2 {
   text-align: center;
  }
- .form h3{
+ .project-form h3{
   margin: 20px;
   text-align: center;
  }
- .form {
+ .project-form {
   width: 30%;
   margin: auto;
  }
- .form input {
+ .project-form .project-input {
   font-size: 17px;
+  padding: 6px;
+  width: 100%;
  }
+ .project-form button{
+  font-size: 17px;
+  padding: 6px;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+
+ }
+ .task-form h3{
+  margin: 20px;
+  text-align: center;
+ }
+ .task-form {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px       ;
+ }
+ .task-form .task-input {
+  font-size: 17px;
+  padding: 6px;
+  width: 100%;
+ }
+ .task-form button {
+  font-size: 17px;
+  padding: 6px;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+ }
+ .task-form select {
+  width: 100%;
+ }
+
  .project-list{
  display: flex;
  justify-content: center;
